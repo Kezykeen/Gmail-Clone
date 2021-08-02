@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid whitesmoke;
+  border-bottom: 2px solid whitesmoke;
 }
 
 .header_left {
@@ -41,4 +41,8 @@
 .header_right {
   display: flex;
   padding-right: 20px;
+}
+
+.header_right_avatar {
+  cursor: pointer;
 }
