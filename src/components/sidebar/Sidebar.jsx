@@ -13,13 +13,21 @@ import {
   Star,
 } from "@material-ui/icons";
 import React from "react";
+import { useDispatch } from "react-redux";
+import { openMessageModal } from "../../features/mailSlice";
 import SidebarOption from "../sidebarOption/SidebarOption";
 import "./Sidebar.css";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div className="sidebar">
-      <Button startIcon={<Add fontsize="large" />} className="sidebar_compose">
+      <Button
+        startIcon={<Add fontSize="large" />}
+        className="sidebar_compose"
+        onClick={() => dispatch(openMessageModal())}
+      >
         Compose
       </Button>
       <SidebarOption Icon={Inbox} title="Inbox" number={54} selected="true" />
